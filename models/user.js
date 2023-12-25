@@ -11,8 +11,6 @@ const UserSchema = new Schema({
     type: String,
     required: [true, 'Please provide a username'],
     unique: [true, 'Username already exists'],
-    // 用户名长度为8~10个字符, 可以包含字母和数字,必须字母开头
-
     match: [/^[\u4e00-\u9fa5a-zA-Z0-9]+$/, 'Username is invalid'],
     lowercase: true
   },
