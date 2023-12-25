@@ -1,4 +1,4 @@
-## Implement Search
+### Implement Search
 
 - Search by prompt
 - Search by tag
