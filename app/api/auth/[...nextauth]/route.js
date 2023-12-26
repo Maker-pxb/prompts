@@ -42,8 +42,9 @@ const handler = NextAuth({
     async signIn({ profile }) {
       try {
         await connectToDB()
-        const { email, name, avatar_url: image } = profile
+        const { email, name, avatar_url, picture } = profile
         console.log('🚀 ~ file: route.js:46 ~ signIn ~ profile:', profile)
+        const image = avatar_url || picture
         // check if a user already exists
         const userExists = await User.findOne({ email })
         console.log('🚀 ~ file: route.js:48 ~ signIn ~ userExists:', userExists)
