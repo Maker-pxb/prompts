@@ -11,6 +11,7 @@ export const GET = async (req, res) => {
       status: 200
     })
   } catch (error) {
+    console.log('🚀 ~ file: route.js:14 ~ GET ~ error:', error)
     return new Response('Failed To fetch all prompt', {
       status: 500
     })
