@@ -26,7 +26,11 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await fetch('/api/prompt')
+      const res = await fetch('/api/prompt', {
+        headers: {
+          'cache-control': 'no-cache'
+        }
+      })
       const json = await res.json()
       setPrompts(json)
       console.log('🚀 ~ file: Feed.jsx:116 ~ ferchPosts ~ json', json)

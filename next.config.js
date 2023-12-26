@@ -4,7 +4,10 @@ const nextConfig = {
     serverComponentsExternalPackages: ['mongoose']
   },
   images: {
-    domains: ['lh3.googleusercontent.com', 'avatars.githubusercontent.com']
+    remotePatterns: [
+      'lh3.googleusercontent.com',
+      'avatars.githubusercontent.com'
+    ]
   },
   webpack(config) {
     config.experiments = {
