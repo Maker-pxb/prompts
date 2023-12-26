@@ -5,8 +5,12 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      'lh3.googleusercontent.com',
-      'avatars.githubusercontent.com'
+      {
+        hostname: 'lh3.googleusercontent.com'
+      },
+      {
+        hostname: 'avatars.githubusercontent.com'
+      }
     ]
   },
   webpack(config) {
